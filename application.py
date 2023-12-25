@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 
 application=Flask(__name__)
+app=application
 ## Load the model
 regmodel=pickle.load(open('regmodel.pkl','rb'))
 scalar=pickle.load(open('scaling.pkl','rb'))
@@ -34,6 +35,6 @@ def predict():
 
 
 if __name__=="__main__":
-    application.run(host="0.0.0.0")
+    app.run(host="0.0.0.0")
    
      
